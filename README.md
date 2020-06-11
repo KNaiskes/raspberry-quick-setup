@@ -45,3 +45,34 @@ Create the ssh file
 ```
 $ sudo touch /mnt/ssh
 ```
+## Expand Filesystem
+
+```
+$ sudo raspi-config
+```
+Advanced Options > Expand Filesystem
+
+
+## Add new user
+
+```
+$ useradd -m username
+$ passwd username
+```
+
+## Add new user to sudo group
+
+```
+$ sudo visudo
+```
+
+Append it with:
+
+```
+username ALL=(ALL:ALL) ALL
+```
+## Delete default user (pi)
+
+```
+$ sudo userdel -r pi
+```
