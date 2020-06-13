@@ -129,4 +129,4 @@ static routers=192.168.0.1
 static domain_name_servers=192.168.0.1
 ```
 
-**You may have to make same changes based on your network configuration**
+**You may have to make some changes based on your network configuration**
