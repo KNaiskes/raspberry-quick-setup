@@ -102,3 +102,14 @@ $ cat ~/.ssh/id_rsa.pub | ssh <USERNAME>@<IP-ADDRESS> 'mkdir -p ~/.ssh && cat >>
 ```
 $ ssh-copy-id <USERNAME>@<IP-ADDRESS>
 ```
+
+## Change hostname
+
+Open files with nano (or vi)  files **/etc/hosts** and **/etc/hostname** and
+replace raspberry with the hostname of your choice.
+
+```
+$ sudo nano /etc/hosts
+$ sudo nano /etc/hostname
+```
+**Changes will take place after rebooting**
