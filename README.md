@@ -76,3 +76,29 @@ username ALL=(ALL:ALL) ALL
 ```
 $ sudo userdel -r pi
 ```
+
+## Setup SSH keys
+
+SSH to Raspberry Pi without typing your password every time
+
+#### Generate SSH keys
+
+If you do not already have a private and public key, proceed
+
+```
+$ ssh-keygen
+```
+
+#### Copy the public key to Raspberry Pi
+
+There are two methods
+
+1.
+```
+$ cat ~/.ssh/id_rsa.pub | ssh <USERNAME>@<IP-ADDRESS> 'mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys'
+```
+
+2.
+```
+$ ssh-copy-id <USERNAME>@<IP-ADDRESS>
+```
