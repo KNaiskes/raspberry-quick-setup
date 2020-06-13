@@ -113,3 +113,20 @@ $ sudo nano /etc/hosts
 $ sudo nano /etc/hostname
 ```
 **Changes will take place after rebooting**
+
+## Setup a static IP
+
+```
+$ sudo nano /etc/dhcpcd.conf
+```
+
+Move to the end of the file and uncomment the following lines
+
+```
+interface eth0
+static ip_address=192.168.0.10/24
+static routers=192.168.0.1
+static domain_name_servers=192.168.0.1
+```
+
+**You may have to make same changes based on your network configuration**
